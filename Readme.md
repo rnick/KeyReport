@@ -1,6 +1,6 @@
 # KeyReport
 
-KeyReport is a webservice creating PDFs by using headles chrome's save-to-pdf function. It was more a proof of concept, but we use it with a couple of applications in production. It is possible to convert any Webpage and using simple or more complex HTML-Pages as a template. 
+KeyReport is a PHP-webservice creating PDFs by using headles chrome's save-to-pdf function. It was more a proof of concept, but we use it with a couple of applications in production. It is possible to convert any Webpage and using simple or more complex HTML-Pages as a template. 
 
 The communication with the local headless chrome instance is done by the library [php-chrome](https://github.com/chrome-php/chrome), so chromium / chrome > version 59 has to be installed on the host.
 
@@ -31,6 +31,13 @@ $ cd KeyReport
 $ composer install
 ```
 
+Give write access to directory log and data
+
+```console
+$ chown www-data ./log ./data
+$ chmod u+w ./log ./data
+```
+
 ### Create template
 The template is the webpage which is loaded by the webservice to convert to pdf. You can use the demo-template KeyReport-Demo-Template from https://github.com/rnick/KeyReport-Demo-Template as a test. So clone it to the webroot.
 
@@ -43,6 +50,9 @@ $ git clone https://github.com/rnick/KeyReport-Demo-Template.git ./demotpl
 $ cd demotpl
 $ composer install
 ```
+
+## Demo
+http://www.ralf-nickel.de/demo/report/tpl/urkunde/demo.html
 
 ## Real-life Use-cases
 
