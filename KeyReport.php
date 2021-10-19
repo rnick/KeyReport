@@ -106,7 +106,7 @@ class KeyReport
         $_PDFOrientation = 'portrait'
     ) {
         // create browser instance at first
-        $this->browserFactory = new BrowserFactory('chromium-browser');
+        $this->browserFactory = new BrowserFactory('chromium');
         
         $this->browser = $this->browserFactory->createBrowser(
             $this->browser_options

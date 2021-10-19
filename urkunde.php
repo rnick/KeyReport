@@ -9,7 +9,7 @@ require_once 'KeyReport.php';
 $get = $_SERVER['QUERY_STRING'];
 
 # set template url
-$tplURL = "http://www.itrn.de/demo/report/tpl/urkunde/tpl.php";
+$tplURL = "http://localhost/demotpl/urkunde/tpl.php";
 
 # forward parameter to template
 $tplURL = $tplURL . "?" . $get;
@@ -29,7 +29,7 @@ $report = new KeyReport($tplURL, "", $browser_timeout, $sleep_pdf, $page_orienta
 $PDFfile = $report->createPDF();
 
 // read filename of report
-$report_name = basename($PDFfile);
+$report_name = basename($PDFfile) . '.pdf';
 
 // send download header
 $mime_type = 'application/pdf';
