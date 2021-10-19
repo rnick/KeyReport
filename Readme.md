@@ -2,7 +2,7 @@
 
 KeyReport is a PHP-webservice creating PDFs by using headles chrome's save-to-pdf function. It was more a proof of concept, but we use it with a couple of applications in production. It is possible to convert any Webpage and using simple or more complex HTML-Pages as a template. 
 
-The communication with the local headless chrome instance is done by the library [php-chrome](https://github.com/chrome-php/chrome), so chromium / chrome > version 59 has to be installed on the host.
+The communication with the local headless chrome instance is done by the library [php-chrome](https://github.com/chrome-php/chrome), so chromium / chrome >= version 64 has to be installed on the host.
 
 ![Schema](./doc/KeyReport-Schema.png)
 
@@ -30,7 +30,6 @@ $this->browserFactory = new BrowserFactory('chromium');
 $this->browserFactory = new BrowserFactory('chromium-browser');
 
 ```
-$this->browserFactory = new BrowserFactory('chromium');
 
 ### Webservice
 The webservice contains the function to convert a page to PDF. Clone the repository to the webroot and install the dependencies with composer.
