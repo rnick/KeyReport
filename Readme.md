@@ -20,6 +20,18 @@ As it is a proof of concept, the project does not have any security like authent
 $ apt-get install chromium apache2 php php-xml libapache2-mod-php php-opcache php-mbstring php-cli php-curl php-gd php-json php-bz2 composer
 ```
 
+On Debian the binary of chromium is 'chromium', on ubuntu it's 'chromium-browser'. You have to set the binary-name in the File KeyReport.php around line 109:
+
+```php
+# debian
+$this->browserFactory = new BrowserFactory('chromium');
+
+# ubuntu
+$this->browserFactory = new BrowserFactory('chromium-browser');
+
+```
+$this->browserFactory = new BrowserFactory('chromium');
+
 ### Webservice
 The webservice contains the function to convert a page to PDF. Clone the repository to the webroot and install the dependencies with composer.
 
