@@ -1,0 +1,6 @@
+/vendor/
+/out/
+*.pdf
+server.log
+composer.lock
+composer.phar
