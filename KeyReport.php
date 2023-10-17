@@ -114,7 +114,7 @@ class KeyReport
 
         switch ($_PDFOrientation) {
             case 'portrait':
-                $this->pdfOptions['portrait'] = true;
+                $this->pdfOptions['landscape'] = false;
                 break;
             case 'landscape':
                 $this->pdfOptions['landscape'] = true;
